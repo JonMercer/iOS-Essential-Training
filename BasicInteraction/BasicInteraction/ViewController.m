@@ -10,9 +10,19 @@
 
 @interface ViewController ()
 
+@property (strong, nonatomic) IBOutlet UITextField *simpleTextField;
+@property (strong, nonatomic) IBOutlet UILabel *simpleLabel;
+
+
 @end
 
 @implementation ViewController
+
+
+//return type means this method can be used in interface builder of xcode
+//IBAction is pretty much void for now
+- (IBAction)changeLabel:(id)sender {
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
