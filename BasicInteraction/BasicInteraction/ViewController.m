@@ -37,6 +37,15 @@
     NSString *message = [NSString stringWithFormat:@"Hello %@",contents];
     [self.simpleLabel setText:message];
     
+    
+    //Resign being firstResponder so that the keyboard goes away
+    [self.simpleTextField resignFirstResponder];
+    
+}
+
+// Inject code when one of more fingers touch the screen
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
 }
 
 - (void)viewDidLoad {
