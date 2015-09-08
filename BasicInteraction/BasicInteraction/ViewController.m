@@ -43,6 +43,15 @@
     
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    NSString *contents = [[self simpleTextField] text];
+    NSString *message = [NSString stringWithFormat:@"Hello %@",contents];
+    [self.simpleLabel setText:message];
+    
+    [textField resignFirstResponder];
+    return YES;
+}
+
 // Inject code when one of more fingers touch the screen
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
